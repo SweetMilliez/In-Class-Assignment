@@ -13,6 +13,15 @@ export default function FormSignUp () {
     router.push("/zodsignin")
   }
 
+
+  const [formData, setFormData] = useState({
+  firstName: '',
+  lastName: '',
+  email: '',
+  password: '',
+})
+
+
   return(
     <View style={styles.container}>
       <Text style={styles.Header}>Welcome to the Bakugan Forums!</Text>
