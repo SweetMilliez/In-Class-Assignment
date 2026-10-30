@@ -15,42 +15,47 @@ export default function FormSignUp () {
 
   return(
     <View style={styles.container}>
-      <Text>Welcome to the Bakugan Forums</Text>
-      <Text>Please Sign up below</Text>
+      <Text style={styles.Header}>Welcome to the Bakugan Forums!</Text>
+      <Text style={styles.Body}>Please Sign up below</Text>
       <TextInput
       style={styles.input}
-      placeholder="Jane"
+      placeholder="Please enter your first name"
       value={firstName}
       onChangeText={setFirstName}
       />
 
       <TextInput
       style={styles.input}
-      placeholder="Doe"
+      placeholder="Please enter your last name"
       value={lastName}
       onChangeText={setLastName}
       />
 
       <TextInput
       style={styles.input}
-      placeholder="Email"
+      placeholder="Please enter your email"
       keyboardType='email-address'
       value={email}
       onChangeText={setEmail}
       />
        <TextInput
        style={styles.input}
-        placeholder="Password"
+        placeholder="Please enter a password"
         value={password}
         secureTextEntry
         onChangeText={setPassword}
       />
+       <TextInput
+       style={styles.input}
+       placeholder="Please confirm your password"
+       secureTextEntry
+       />
 
 
 
 
       <Pressable style={styles.button} onPress={signUp}>
-        <Text>Sign Up</Text>
+        <Text style={styles.buttonText}>Sign Up</Text>
       </Pressable>
 
 
@@ -70,6 +75,27 @@ const styles = StyleSheet.create({
     backgroundColor: "#ffffff",
   },
 
+  Header: {
+    fontSize: 20,
+    fontWeight: "bold",
+    marginTop: 10,
+    marginBottom: 10,
+    textAlign: "center"
+  },
+
+  Body: {
+    fontSize: 15,
+    marginTop: 10,
+    marginBottom: 10,
+    textAlign: "center"
+  },
+
+  buttonText: {
+    fontSize: 14,
+    fontWeight: "bold",
+  },
+
+
   input: {
     borderWidth: 1,
     borderColor: "#080000",
@@ -81,7 +107,7 @@ const styles = StyleSheet.create({
 
 
   button: {
-    backgroundColor: "#9500ff",
+    backgroundColor: "#f60000",
     padding: 10,
     borderRadius: 6,
     alignItems: "center",
