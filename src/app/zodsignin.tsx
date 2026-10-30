@@ -1,3 +1,4 @@
+import { useRouter } from "expo-router";
 import * as z from "zod";
 
 
@@ -8,3 +9,10 @@ const User = z.object({
   password:  z.string().min(8),
   confirmPassword:  z.string(),
 })
+
+
+
+export default function SignUpScreen() {
+  const router = useRouter();
+  
+}
